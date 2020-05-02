@@ -40,5 +40,33 @@ public class ImportantMethods {
             the current capacity plus 2.
             The capacity is now (20 * 2 ) + 2 = 42.
          */
+
+        StringBuffer sb3 = new StringBuffer("abcdefgh");
+        sb3.insert(2, "xyz");
+        System.out.println(sb3); // abxyzcdefgh
+
+        StringBuffer sb4 = new StringBuffer("abcdefgh");
+        sb4.insert(2, true);
+        System.out.println(sb4); // abtruecdefgh
+
+        StringBuffer sb5 = new StringBuffer("abcdefgh");
+        // from begin index to end-1 index
+        sb5.delete(0, 2);
+        System.out.println(sb5); // cdefgh
+
+        StringBuffer sb6 = new StringBuffer("Java");
+        sb6.deleteCharAt(2);
+        System.out.println(sb6); // Jaa
+
+        StringBuffer sb7 = new StringBuffer("Java");
+        sb7.reverse();
+        System.out.println(sb7); // avaJ
+
+        StringBuffer sb8 = new StringBuffer("Java"); // capacity = 20
+        sb8.setLength(2);
+        System.out.println(sb8); // Ja
+        System.out.println(sb8.capacity()); // 20
+        sb8.trimToSize();
+        System.out.println(sb8.capacity()); // 2
     }
 }
