@@ -6,31 +6,44 @@ public class ImportantMethods {
 
         StringBuffer sb1 = new StringBuffer();
         // length()
-        System.out.println(sb1.length());
+        System.out.println(sb1.length()); // 0
         // capacity
-        System.out.println(sb1.capacity());
+        System.out.println(sb1.capacity()); // 16
 
         StringBuffer sb2 = new StringBuffer("Java");
         // charAt()
-        System.out.println(sb2.charAt(2));
+        System.out.println(sb2.charAt(2)); // v
         // setCharAt()
         sb2.setCharAt(0, 'Y' );
-        System.out.println(sb2);
+        System.out.println(sb2); // Yava
 
         // append()
         sb1.append("PI value is ");
         sb1.append("3.14");
         sb1.append(" , it is exactly ");
         sb1.append("true");
-        System.out.println(sb1);
+        System.out.println(sb1); // PI value is 3.14 , it is exactly true
+
+        // append() with null
+        // StringBuilder sb1a = new StringBuilder();
+        // System.out.println(sb1a.append(null).length()); // compilation error
+        /**
+         * 'append' method is overloaded in StringBuilder class:
+         * append(String), append(StringBuffer) and append(char[]) etc.
+         *
+         * In this case compiler gets confused as to which method
+         * `append(null)` can be tagged because String, StringBuffer and char[]
+         * are not related to each other in multilevel inheritance.
+         * Hence `sb.append(null)` causes compilation error.
+         */
 
         // initialize the StringBuffer object
         StringBuilder sb = new StringBuilder("java");
-        System.out.println("Contents of buffer:" + sb);
-        System.out.println("Old Capacity:" + sb.capacity()); // 16 + 4
+        System.out.println("Contents of buffer:" + sb); // Contents of buffer:java
+        System.out.println("Old Capacity:" + sb.capacity()); // 16 + 4 - Old Capacity:20
         // increase the capacity
         sb.ensureCapacity(21);
-        System.out.println("New Capacity:" + sb.capacity());
+        System.out.println("New Capacity:" + sb.capacity()); // New Capacity:42
         /*
             The length of the string is 4. With the initial capacity of
             the buffer to be 16, the capacity is now 20.
