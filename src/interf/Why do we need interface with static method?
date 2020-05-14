@@ -1,0 +1,32 @@
+Interface is useful for utility methods:
+
+    add()
+    sub()
+    ....
+
+    // before Java 1.8 we used regular class to create utility methods
+
+
+    class Test {
+        public static void add(int a, int b) {
+            System.out.println(a + b);
+        }
+
+        public static void sub(int a, int b) {
+            System.out.println(a - b);
+        }
+    }
+
+// Now we don't need to create an object and performance will be improved
+
+    interface Interf {
+
+       static void add(int a, int b) {
+           System.out.println(a + b);
+       }
+
+       static void sub(int a, int b) {
+           System.out.println(a - b);
+       }
+
+    }
