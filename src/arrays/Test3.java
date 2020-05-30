@@ -1,7 +1,6 @@
 package arrays;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class Test3 {
     public static void main(String[] args) {
@@ -42,11 +41,34 @@ public class Test3 {
          * while using Iterator or ListIterator, then use Iterator.remove() or
          * ListIterator.remove() method and NOT List.remove(...) method.
          */
-        for(String dryFruit : dryFruits) {
-            if(dryFruit.startsWith("A")) {
-                dryFruits.remove(dryFruit);
+        // Example 1
+//        for(String dryFruit : dryFruits) {
+//            if(dryFruit.startsWith("A")) {
+//                dryFruits.remove(dryFruit);
+//            }
+//            System.out.println(dryFruit);
+//        }
+//
+//        System.out.println(dryFruits);
+
+        // Example 2
+//        Iterator<String> iterator = dryFruits.iterator();
+//        while(iterator.hasNext()) {
+//            String dryFruit = iterator.next();
+//            if(dryFruit.startsWith("A")) {
+//                dryFruits.remove(dryFruit);
+//            }
+//            System.out.println(dryFruit);
+//        }
+//
+//        System.out.println(dryFruits);
+
+        // Example 3
+        ListIterator<String> iterator = dryFruits.listIterator();
+        while(iterator.hasNext()) {
+            if(iterator.next().startsWith("A")) {
+                iterator.remove();
             }
-            System.out.println(dryFruit);
         }
 
         System.out.println(dryFruits);
