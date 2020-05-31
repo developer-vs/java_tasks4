@@ -41,7 +41,7 @@ public class Test3 {
          * while using Iterator or ListIterator, then use Iterator.remove() or
          * ListIterator.remove() method and NOT List.remove(...) method.
          */
-        // Example 1
+        // Example 1 - RE
 //        for(String dryFruit : dryFruits) {
 //            if(dryFruit.startsWith("A")) {
 //                dryFruits.remove(dryFruit);
@@ -51,7 +51,7 @@ public class Test3 {
 //
 //        System.out.println(dryFruits);
 
-        // Example 2
+        // Example 2 - RE
 //        Iterator<String> iterator = dryFruits.iterator();
 //        while(iterator.hasNext()) {
 //            String dryFruit = iterator.next();
@@ -63,7 +63,7 @@ public class Test3 {
 //
 //        System.out.println(dryFruits);
 
-        // Example 3
+        // Example 3 - OK
         ListIterator<String> iterator = dryFruits.listIterator();
         while(iterator.hasNext()) {
             if(iterator.next().startsWith("A")) {
