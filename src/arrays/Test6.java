@@ -18,7 +18,8 @@ public class Test6 {
          * and not Boolean type and hence if(list.remove(2))
          * causes compilation error.
          */
-//        if(list.remove(2)) {    // CE
+
+//        if(list.remove(2)) {    // CE, list.remove(2)) - return: THREE
 //            list.remove("THREE");
 //        }
 
