@@ -8,9 +8,9 @@ public class SubClass extends SuperClass {
         // CE: There is no default constructor available in 'inherit.SuperClass'
         i = m;
         j = m;
-    } //1
+    }
 
     public SubClass(int m) {
         super(m);
-    } //2
+    }
 }
